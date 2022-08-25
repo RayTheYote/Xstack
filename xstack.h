@@ -33,4 +33,16 @@ namespace xstack{
 			nodo_dummy=nodo_dummy->siguiente_nodo;
 		}
 	}
+	
+	int first_element(){
+		return puntero_maestro->valor;
+	}
+	
+	int last_element(){
+		nodo *nodo_dummy=puntero_maestro;
+		while(nodo_dummy->siguiente_nodo != NULLL){
+			nodo_dummy=nodo_dummy->siguiente_nodo;
+		}
+		return nodo_dummy->valor;
+	}
 }
