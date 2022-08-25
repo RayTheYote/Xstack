@@ -1,2 +1,2 @@
 # Xstack
-A basic library for implement a stack
+Una libreria basica para implementar una pila en C++
