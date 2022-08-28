@@ -1,7 +1,6 @@
-#include <iostream>
-
 #ifndef XSTACK
 	#define XSTACK
+	#include <iostream>
 	namespace xstack{
 		struct nodo{ //Definicion de la estructura nodo
 			int valor; //Valor que tendra cada nodo
