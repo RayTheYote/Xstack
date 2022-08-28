@@ -2,6 +2,7 @@
 
 #ifndef XSTACK
 	#define XSTACK
+	//template <typename GENERIC>
 	namespace xstack{
 		struct nodo{ //Definicion de la estructura nodo
 			int valor; //Valor que tendra cada nodo
