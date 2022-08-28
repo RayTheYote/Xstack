@@ -2,16 +2,16 @@
 
 #ifndef XSTACK
 	#define XSTACK
-	//template <typename GENERIC>
+	template <typename GENERIC>
 	namespace xstack{
 		struct nodo{ //Definicion de la estructura nodo
-			int valor; //Valor que tendra cada nodo
+			GENERIC valor; //Valor que tendra cada nodo
 			nodo *siguiente_nodo; //Apuntadaor encargado de apuntar al valor de memoria del nodo siguiente al que se definio
 		};
 	
 		nodo *puntero_maestro=NULL; //Puntero encargado de apuntar el nodo en el tope de la pila
 		
-		void push(int val){ //Funcion encargada de agregar nodos a la pila
+		void push(GENERIC val){ //Funcion encargada de agregar nodos a la pila
 			nodo *nodo_dummy=new nodo;
 			nodo_dummy->valor=val;
 			nodo_dummy->siguiente_nodo=puntero_maestro;
