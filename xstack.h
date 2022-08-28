@@ -1,6 +1,5 @@
 #include <iostream>
 
-
 #ifndef XSTACK
 	#define XSTACK
 	namespace xstack{
