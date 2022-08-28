@@ -20,7 +20,8 @@
 		int pop(){ //Funcion encargada de quitar el nodo en el tope de la pila
 			nodo *nodo_dummy=puntero_maestro;
 			puntero_maestro=nodo_dummy->siguiente_nodo;
-			if(delete nodo_dummy){
+			if(nodo_dummy->siguiente_nodo != NULL){
+				delete nodo_dummy;
 				return 0;
 			}
 			else{
@@ -28,7 +29,7 @@
 			}
 		}
 	
-		void show(){ //Funcion encargada de mostrar todos los elementos de la pila
+		void show_stack(){ //Funcion encargada de mostrar todos los elementos de la pila
 			nodo *nodo_dummy=puntero_maestro;
 			while(nodo_dummy != NULL){
 				std::cout<<nodo_dummy->valor<<"\n";
@@ -36,13 +37,13 @@
 			}
 		}
 		
-		int first_element(){ //Funcion encargada de devolver el primer nodo que se ingreso a la pila
+		int show_first_element(){ //Funcion encargada de devolver el primer nodo que se ingreso a la pila
 			return puntero_maestro->valor;
 		}
 	
-		int last_element(){ //Funcion encargada de devolver el ultimo nodo que se ingreso a la pila
+		int show_last_element(){ //Funcion encargada de devolver el ultimo nodo que se ingreso a la pila
 			nodo *nodo_dummy=puntero_maestro;
-			while(nodo_dummy->siguiente_nodo != NULLL){
+			while(nodo_dummy->siguiente_nodo != NULL){
 				nodo_dummy=nodo_dummy->siguiente_nodo;
 			}
 			return nodo_dummy->valor;
